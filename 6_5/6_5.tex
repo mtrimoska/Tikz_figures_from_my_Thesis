@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{subcaption}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[h!]
+		\centering
+		\begin{subfigure}{0.33\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\node[shape=circle,draw=black,thick,scale=2] (v1) at (0,0) {};
+        
+		\node[shape=circle,draw=black,thick,scale=2] (v2) at (0.3,3) {};
+        
+        \draw [thick,->] (v1.0) .. controls (1.5,1.5) .. (v2.0);
+        \draw [thick,<-] (v1.180) .. controls (-1,1.5) .. (v2.180);
+        
+        \node[shape=circle,draw=black,thick,scale=2] (v3) at (2,1.5) {};
+        \draw [thick,->] (v3.90) .. controls (3,3) and (3.5,2) .. (v3.0);
+	
+		\end{tikzpicture}
+		\caption{}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\centering
+		\begin{tikzpicture}
+		\node[shape=circle,draw=black,thick,scale=2] (v1) at (2.5,4) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v2) at (0,2) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v3) at (2,2) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v4) at (0,0) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v5) at (3,0) {};
+		
+		\draw [thick,->] (v5.180) -- (v4.0);
+		\draw [thick,->] (v4.90) -- (v2.270);
+		\draw [thick,->] (v2.0) -- (v3.180);
+		\draw [thick,->] (v3.225) -- (v4.45);
+		\draw [thick,->] (v1.260) -- (v3.80);
+	
+		\end{tikzpicture}
+		\caption{}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\centering
+		\begin{tikzpicture}
+	    \node[shape=circle,draw=black,thick,scale=2] (v1) at (1.5,0) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v2) at (0,2) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v3) at (3,2) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v4) at (0.5,4) {};
+		\node[shape=circle,draw=black,thick,scale=2] (v5) at (2.5,4) {};
+		
+		\draw [thick,->] (v1.135) -- (v2.315);
+		\draw [thick,->] (v2.90) -- (v4.270);
+		\draw [thick,->] (v4.0) -- (v5.180);
+		\draw [thick,->] (v5.270) -- (v3.90);
+		\draw [thick,->] (v3.225) -- (v1.45);
+		
+		\end{tikzpicture}
+		\caption{}
+		\end{subfigure}
+		\caption{Examples of graphs where all connected components contain a cycle.}
+		\label{fig:admissible-graphs}
+	\end{figure}
+\end{document}

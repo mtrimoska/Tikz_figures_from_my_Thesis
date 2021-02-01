@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+	 \usetikzlibrary{arrows,calc}
+\usetikzlibrary{arrows.meta}
+\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}[level distance=2cm,
+		level 1/.style={sibling distance=6cm},
+		level 3/.style={sibling distance=4cm}]
+		\node (1) {$x_{1,\ldots,k} \Leftrightarrow x_1 \land \ldots \land x_k$}
+		child {node (2) {$x_{1,\ldots,k} \Rightarrow x_1 \land \ldots \land x_k$}
+		    child {node (4) {$\lnot x_{1,\ldots,k} \lor (x_1 \land \ldots \land x_k)$}
+		        child {node (6) {$\lnot x_{1,\ldots,k} \lor x_1$}}
+		        child {node (7) {$\lnot x_{1,\ldots,k} \lor x_k$}}
+		    }
+		}
+		child {node (3) {$x_1 \land \ldots \land x_k \Rightarrow x_{1,\ldots,k}$}
+		    child {node (5) {$\lnot(x_1 \land \ldots \land x_k) \lor x_{1,\ldots,k}$}
+		        child {node (8) {$\lnot x_1 \lor \ldots \lor \lnot x_k \lor x_{1,\ldots,k}$}}
+		    }
+		};
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (1) --  node {} (2) ;
+		
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (1) --  node {} (3) ;
+		
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (2) --  node [right] {} (4) ;
+		
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (4) --  node {} (6) ;
+		
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (4) --  node {} (7) ;
+		
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (3) --  node {} (5) ;
+		
+		\draw [-{Stealth[length=4mm, width=2.5mm]}] (5) --  node {} (8) ;
+		
+		\node at ($(6)!.5!(7)$) {\LARGE {\ldots}};
+		\end{tikzpicture}
+		\caption{A three-step transformation from an equivalency to CNF constraints.}
+		\label{fig:cnf-transform}
+	\end{figure}
+
+\end{document}

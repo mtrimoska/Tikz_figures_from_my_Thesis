@@ -1,0 +1,33 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{subcaption}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[h!]
+		\centering
+		\begin{tikzpicture}
+		
+		\draw [thick] (-3,-3) -- (1,2);
+		\draw [thick] (0.3,-3) -- (-0.5,0.125);
+		
+		\draw[thick, fill=none] (-3,-3) circle(3pt) node[above left]{$x_{0}^1$};
+		\draw[thick, fill=none] (0.3,-3) circle(3pt) node[above left]{$x_{0}^2$};
+		\draw[thick, fill=none] (-0.5,0.125) circle(3pt) node[above left]{$x_{i}^1=x_{j}^2$};
+		\draw[thick, fill=black] (1,2) circle(3pt) node[above left]{$x_{i+\frac{1}{\theta}}^1=x_{j+\frac{1}{\theta}}^2$};
+		
+		\node at (-4,-3.5) {Walk of thread 1};
+		\node at (1.3,-3.5) {Walk of thread 2};
+		
+		\end{tikzpicture}
+		\caption{Collision search by thread 1 and thread 2 starting from point $x_{0}^1$ and point $x_{0}^2$ respectively. Nondistinguished points are transparent.}
+		\label{fig:random-walk-dist}
+	\end{figure}
+
+\end{document}

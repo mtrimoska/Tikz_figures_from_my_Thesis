@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}
+		\centering
+		\begin{tikzpicture}[level distance=0.9cm,
+		level 1/.style={sibling distance=4cm},
+		level 2/.style={sibling distance=3cm},
+		level 3/.style={sibling distance=2.2cm},
+		level 4/.style={sibling distance=1.8cm}]
+		\node (1) {$x_1$}
+		child {node (2) {X}}
+		child {node (3) {$x_2$}
+			child {node (4) {X}}
+			child {node (5) {$x_3$}
+				child {node (6) {$x_4$}
+					child {node (7) {OK}
+					}
+					child[fill=none] {edge from parent[draw=none]}
+				}
+				child[fill=none] {edge from parent[draw=none]}
+			}
+		};
+		\draw [->] (1) --  node [left] {\footnotesize{$F$}} (2) ;
+		\draw [->] (1) --  node [right] {\footnotesize{$T$}} (3) ;
+		\draw [->] (3) --  node [left] {\footnotesize{$F$}} (4) ;
+		\draw [->] (3) --  node [right] {\footnotesize{$T$}} (5) ;
+		\draw [->] (5) --  node [left] {\footnotesize{$F$}} (6) ;
+		\draw [->] (6) --  node [left] {\footnotesize{$F$}} (7) ;
+		\draw [->, opacity=0.35, dashed] (2) to [out=-10,in=-100] (1);
+		\draw [->, opacity=0.35, dashed] (4) to [out=-10,in=-100] (3);
+		\end{tikzpicture}
+		\caption{Binary search tree constructed with the \textsc{dpll} algorithm.}
+		\label{fig:tree}
+	\end{figure}
+
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+	 \begin{figure}
+		\centering
+		\begin{tikzpicture}[level distance=2.5cm,
+		level 1/.style={sibling distance=5cm},
+		level 2/.style={sibling distance=5cm}]
+		\node (1) {$x_1$ @ 0}
+		child[fill=none] {edge from parent[draw=none]}
+		child {node (2) {$\lnot x_4$ @ 1}
+		child[fill=none] {edge from parent[draw=none]}
+		child {node (4) {X}}
+		}
+		node (3) at ($(1) + (0:5cm)$) {$\lnot x_2$ @ 1}
+		;
+		\draw [->] (1) --  node [right] {\footnotesize{$C_1$}} (2) ;
+		\draw [->] (2) --  node [right] {\footnotesize{$C_5$}} (4) ;
+		\draw [->] (3) --  node [left] {\footnotesize{$C_1$}} (2) ;
+		\draw [->] (3) --  node [right] {\footnotesize{$C_5$}} (4) ;
+		\end{tikzpicture}
+		\caption{Implication graph corresponding to the second conflict in Figure 3.1.}
+	\end{figure}
+
+\end{document}

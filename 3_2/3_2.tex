@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}
+		\centering
+		\begin{tikzpicture}[level distance=2.5cm,
+		level 1/.style={sibling distance=5cm}]
+		\node (1) {$\lnot x_1$ @ 0}
+		child {node (2) {$\lnot x_3$ @ 0}
+		child[fill=none] {edge from parent[draw=none]}
+		child {node (4) {X}}
+		}
+		child[fill=none] {edge from parent[draw=none]}
+		;
+		\draw [->] (1) --  node [left] {\footnotesize{$C_3$}} (2) ;
+		\draw [->] (2) --  node [left] {\footnotesize{$C_4$}} (4) ;
+		\draw [->] (1) --  node [right] {\footnotesize{$C_4$}} (4) ;
+		\end{tikzpicture}
+		\caption{Implication graph corresponding to the first conflict in Figure 3.1.}
+	\end{figure}
+
+\end{document}

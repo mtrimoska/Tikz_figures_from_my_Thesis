@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+    \pgfplotsset{
+        compat=1.12,
+    }
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}
+	[
+	xlabel={Trailing zero bits},
+	ylabel={Runtime ($\mu$s)},
+	legend pos=north west,
+	grid=both,
+	grid style=dashed,
+	width=\textwidth,
+	height=7cm,
+	nodes near coords,
+	]
+	\addplot[color=blue,mark=x,mark size=2pt, point meta=explicit symbolic,every node near coord/.append style={xshift=8pt,yshift=10pt,anchor=east,font=\scriptsize}]
+	table[meta=label] {hash-theta.data};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Timings of solving ECDLP for different values of $\theta$, 65-bits curve, 28 threads} \label{hash_theta_timings}	
+\end{figure}
+
+\end{document}

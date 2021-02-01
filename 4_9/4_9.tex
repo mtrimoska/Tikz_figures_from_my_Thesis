@@ -1,0 +1,295 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{subcaption}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[h!]
+		\centering
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		\filldraw[black!50!white, draw=black] (0,1.5) rectangle (0.5,2);
+		\filldraw[black!50!white, draw=black] (2,1.5) rectangle (2.5,2);
+		\filldraw[black!50!white, draw=black] (2.5,1.5) rectangle (3,2);
+		\filldraw[black!50!white, draw=black] (3,1.5) rectangle (3.5,2);
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2.5,1) rectangle (3,1.5);
+		\filldraw[black!50!white, draw=black] (3,1) rectangle (3.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2.5,0.5) rectangle (3,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (0,0) rectangle (0.5,0.5);
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (2.5,0) rectangle (3,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~3}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2.5,1) rectangle (3,1.5);
+		\filldraw[black!50!white, draw=black] (3,1) rectangle (3.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2.5,0.5) rectangle (3,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (0,0) rectangle (0.5,0.5);
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (2.5,0) rectangle (3,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~4}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		\filldraw[black!50!white, draw=black] (0,1.5) rectangle (0.5,2);
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2.5,1) rectangle (3,1.5);
+		\filldraw[black!50!white, draw=black] (3,1) rectangle (3.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2.5,0.5) rectangle (3,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (0,0) rectangle (0.5,0.5);
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (2.5,0) rectangle (3,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~6}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		\filldraw[black!50!white, draw=black] (0,1.5) rectangle (0.5,2);
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2.5,1) rectangle (3,1.5);
+		\filldraw[black!50!white, draw=black] (3,1) rectangle (3.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2.5,0.5) rectangle (3,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (2.5,0) rectangle (3,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~7}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		\filldraw[black!50!white, draw=black] (0,1.5) rectangle (0.5,2);
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2,1) rectangle (2.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2.5,0.5) rectangle (3,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (2.5,0) rectangle (3,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~11}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		\filldraw[black!50!white, draw=black] (0,1.5) rectangle (0.5,2);
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2,1) rectangle (2.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2,0.5) rectangle (2.5,1);
+		\filldraw[black!50!white, draw=black] (3,0.5) rectangle (3.5,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (2.5,0) rectangle (3,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~11}
+		\end{subfigure}%
+		\hfill
+		\begin{subfigure}{0.33\textwidth}
+		\begin{tikzpicture}
+		%grid outline
+		\draw[step=0.5cm,black,very thin] (0,0) grid (3.5,2);
+		
+		%indexes
+		\draw[thick] (0,2) -- (0.5,2) node[anchor=south east] {$\top$/$\bot$};
+		\draw[thick] (0.5,2) -- (1,2) node[anchor=south east] {$x_{1}$};
+		\draw[thick] (1,2) -- (1.5,2) node[anchor=south east] {$x_{2}$};
+		\draw[thick] (1.5,2) -- (2,2) node[anchor=south east] {$x_{3}$};
+		\draw[thick] (2,2) -- (2.5,2) node[anchor=south east] {$x_{4}$};
+		\draw[thick] (2.5,2) -- (3,2) node[anchor=south east] {$x_{5}$};
+		\draw[thick] (3,2) -- (3.5,2) node[anchor=south east] {$x_{6}$};
+	
+	    %representatives
+	    \draw[thick] (0,1.5) -- (0,2) node[anchor=north east] {$x_{1}$};
+		\draw[thick] (0,1) -- (0,1.5) node[anchor=north east] {$x_{2}$};
+		\draw[thick] (0,0.5) -- (0,1) node[anchor=north east] {$x_{3}$};
+		\draw[thick] (0,0) -- (0,0.5) node[anchor=north east] {$x_{5}$};
+		
+		%bits
+		\filldraw[black!50!white, draw=black] (0,1.5) rectangle (0.5,2);
+		
+		\filldraw[black!50!white, draw=black] (0,1) rectangle (0.5,1.5);
+		\filldraw[black!50!white, draw=black] (2,1) rectangle (2.5,1.5);
+		
+		\filldraw[black!50!white, draw=black] (0,0.5) rectangle (0.5,1);
+		\filldraw[black!50!white, draw=black] (2,0.5) rectangle (2.5,1);
+		\filldraw[black!50!white, draw=black] (3,0.5) rectangle (3.5,1);
+		
+		
+		\filldraw[black!50!white, draw=black] (2,0) rectangle (2.5,0.5);
+		\filldraw[black!50!white, draw=black] (3,0) rectangle (3.5,0.5);
+	
+		\end{tikzpicture}
+		\caption{After line~21}
+		\end{subfigure}
+		\caption{Setting $x_1$ to TRUE ($x_5$ is chosen as the new representative). Stream of changes on the $EC$ structure after execution of the respective lines of Algorithm~4.8.}
+		\label{fig:ec_struct_2}
+	\end{figure}
+
+
+
+\end{document}
