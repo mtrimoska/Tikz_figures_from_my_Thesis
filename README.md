@@ -1,7 +1,7 @@
 # Tikz figures from my Thesis
 This repository contains the LaTeX sources for the tikz figures in my PhD thesis (the manuscript can be found [here](https://mtrimoska.com/Monika_Trimoska_these.pdf)). Feel free to use this code if you need similar figures.
 
-###List of figures:###
+### List of figures: ###
 
 * Figure 3.1: Binary search tree constructed with the DPLL algorithm
 
